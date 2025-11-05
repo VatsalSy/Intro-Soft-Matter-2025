@@ -8,7 +8,7 @@ Plots:
 
 Analytical expressions:
     θ³ = 1 + 0.03*ln(e*x)
-    dθ/dx = 0.03/(e*x*θ²) where θ = (θ³)^(1/3)
+    dθ/dx = 0.01/(x*θ²) where θ = (θ³)^(1/3)
 """
 
 import numpy as np
