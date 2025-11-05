@@ -60,7 +60,7 @@ def theta(x):
 
 def dtheta_dx(x):
     """
-    Calculate dθ/dx = 0.03/(e*x*θ²)
+    Calculate dθ/dx = 0.01/(x*θ²)
 
     Parameters
     ----------
@@ -73,7 +73,7 @@ def dtheta_dx(x):
         dθ/dx values
     """
     theta_val = theta(x)
-    return 0.03 / (np.e * x * theta_val**2)
+    return 0.01 / (x * theta_val**2)
 
 
 # ============================================================================
@@ -100,7 +100,7 @@ ax1.legend(loc='best')
 ax1.set_xlim([0, 1000])
 
 # Subplot 2: dθ/dx
-ax2.plot(x_linear, dtheta_linear, 'r-', linewidth=3, label=r'$\frac{d\theta}{dx} = \frac{0.03}{ex\theta^2}$')
+ax2.plot(x_linear, dtheta_linear, 'r-', linewidth=3, label=r'$\frac{d\theta}{dx} = \frac{0.01}{x\theta^2}$')
 ax2.set_xlabel(r'$x$')
 ax2.set_ylabel(r'$\frac{d\theta}{dx}$')
 ax2.set_title(r'Derivative of Contact Angle')
@@ -137,7 +137,7 @@ ax3.legend(loc='best')
 ax3.set_xlim([1e-3, 1e5])
 
 # Subplot 2: dθ/dx on log-log scale
-ax4.loglog(x_log, dtheta_log, 'r-', linewidth=3, label=r'$\frac{d\theta}{dx} = \frac{0.03}{ex\theta^2}$')
+ax4.loglog(x_log, dtheta_log, 'r-', linewidth=3, label=r'$\frac{d\theta}{dx} = \frac{0.01}{x\theta^2}$')
 ax4.set_xlabel(r'$x$')
 ax4.set_ylabel(r'$\frac{d\theta}{dx}$')
 ax4.set_title(r'Derivative of Contact Angle (Log-Log)')
